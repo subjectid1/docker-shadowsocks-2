@@ -6,7 +6,7 @@ LABEL maintainer="Abreto<m@abreto.net>"
 RUN apt-get update && apt-get install -qy \
     git \ 
     python3-pip
-RUN pip install -qy --upgrade pip wheel setuptools requests
+RUN pip install --upgrade pip wheel setuptools requests
 RUN pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 
 WORKDIR /bootstrap
