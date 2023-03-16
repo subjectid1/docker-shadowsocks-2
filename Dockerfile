@@ -3,7 +3,9 @@ FROM ubuntu
 
 LABEL maintainer="Abreto<m@abreto.net>"
 
-RUN apt-get update && apt-get install  python3-pip
+RUN apt-get update && apt-get install -qy \
+    git \ 
+    python3-pip
 
 RUN pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 
